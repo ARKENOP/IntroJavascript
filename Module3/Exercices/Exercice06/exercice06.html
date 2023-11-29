@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inventaire = {
+            "pommes": 30,
+            "bananes": 15,
+            "cerises": 20
+        };
+
+        console.log("Inventaire initial: ", inventaire);
+
+        inventaire["cerises"] = 25;
+        
+        inventaire["pommes"] += 10;
+
+        inventaire["bananes"] -= 5;
+        
+        console.log("Inventaire intermédiaire: ", inventaire);
+
+        console.log("Inventaire final: ", inventaire);
+    </script>
+</body>
+</html>
