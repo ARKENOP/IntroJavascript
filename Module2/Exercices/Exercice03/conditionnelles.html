@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let categorie = "alimentation";
+    let montantTotalAchat = 100;
+    
+    if(categorie == "électronique"){
+        montantTotalAchat = montantTotalAchat * 0.9;
+    }else if(categorie == "vêtements"){
+        montantTotalAchat = montantTotalAchat * 0.8;
+    }else if(categorie == "alimentation"){
+        montantTotalAchat = montantTotalAchat * 0.95;
+    }
+    
+    console.log("Montant total des achats : " + montantTotalAchat);
+    console.log("Réduction applicable : " + (montantTotalAchat * 0.05));
+    console.log("Montant après réduction : " + (montantTotalAchat * 0.95));
+    
+    switch(categorie){
+        case "électronique":
+            console.log("Catégorie électronique");
+            break;
+        case "vêtements":
+            console.log("Catégorie vêtements");
+            break;
+        case "alimentation":
+            console.log("Catégorie alimentation");
+            break;
+        default:
+            console.log("Catégorie inconnue");
+    }
+
+</script>
+</body>
+</html>

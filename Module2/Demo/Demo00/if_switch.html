@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let score = 75;
+
+    if(score >= 90){
+        console.log("A");
+    }else if(score >= 80){
+        console.log("B");
+    }else if(score >= 70){
+        console.log("C");
+    }
+
+    let fruit = "pomme";
+
+    switch(fruit){
+        case "pomme":
+            console.log("C'est une pomme");
+            break;
+        case "banane":
+            console.log("C'est une banane");
+            break;
+        default:
+            console.log("C'est un fruit");
+    }
+
+    //exemple de boucle for of
+    let fruits = ["pomme", "banane", "orange"];
+    for(let fruit of fruits){
+        console.log(fruit);
+    }
+</script>
+</body>
+</html>
