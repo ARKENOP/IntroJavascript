@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher/Masquer</title>
+</head>
+<body>
+    <p id="paragraphe" style="display: none;">Paragraphe caché</p>
+    <button id="bouton">Afficher</button>
+    <button id="bouton2">Ajouter élément</button>
+    <button id="bouton3">Supprimer élément</button>
+<script>
+
+bouton2.addEventListener("click", function() {
+    let div = document.createElement("div");
+    div.style.width = "100px";
+    div.style.height = "100px";
+    div.style.backgroundColor = "blue"
+    div.style.marginTop = "10px";
+    document.body.appendChild(div);
+});
+
+
+bouton3.addEventListener("click", function() {
+    let div = document.querySelector("div");
+    document.body.removeChild(div);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  let ajouterElement = () => {
+    // Création du div
+    let div = document.createElement("div");
+    // Ajout de la classe
+    div.classList.add("carre");
+    // Ajout de la couleur de fond
+    div.style.backgroundColor = "blue"
+    // Ajout de l'élément au DOM
+    document.body.appendChild(div);
+  }
+
+  // Ajout d'un écouteur d'évènement sur le bouton
+  document.getElementById("bouton2").addEventListener("click", ajouterElement);
+});
+</script>
+</body>
+</html>
