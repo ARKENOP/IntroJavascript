@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="emplacement"></p>
+<script>
+    //Objet contenant les informations suivante : un prénom , un age et 3 hobbies
+    let paul = {
+        prenom: "Paul",
+        age: 25,
+        hobbies: ["Msucu", "Cinéma", "Jeux vidéos"]
+    };
+
+    //Fonction qui affiche les informations de l'objet paul dans le document HTML
+    let afficherInformations = (prenom, age, hobbies) => {
+        document.getElementById("emplacement").innerHTML = "Prénom : " + prenom + "<br>Age : " + age + "<br>Hobbies : " + hobbies;
+
+    }
+
+    //Test de la fonction
+    afficherInformations(paul.prenom, paul.age, paul.hobbies);
+
+</script>
+</body>
+</html>
