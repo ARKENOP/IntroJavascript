@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afficher Informations Utilisateur</title>
+</head>
+<body>
+
+  <div id="userInfo">
+    <!-- Les informations de l'utilisateur seront affichées ici -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const userInfoDiv = document.getElementById('userInfo');
+
+      // URL de l'API
+      const apiUrl = 'https://reqres.in/api/users?albumId=1';
+
+      // Effectuer la requête GET
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          // Récupérer le premier utilisateur
+          const utilisateur = data.data[0];
+
+          // Afficher les informations de l'utilisateur dans le navigateur
+          userInfoDiv.innerHTML = `
+            <p>Album ID: ${utilisateur.id}</p>
+            <p>First Name: ${utilisateur.first_name}</p>
+            <p>Last Name: ${utilisateur.last_name}</p>
+            <img src="${utilisateur.avatar}" alt="Avatar">
+          `;
+        })
+        .catch(error => console.error('Erreur lors de la récupération des données:', error));
+    });
+  </script>
+
+</body>
+</html>
