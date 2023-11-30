@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <script>
+        function validerFormulaire(nom,email){
+            if(nom != "" && email != ""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        let afficherMessage = (message) => {
+            console.log(message);
+        }
+
+        let envoyerDonnees = (donneesUtilisateur) => {
+            console.log("Données envoyées : ",donneesUtilisateur);
+        }
+
+        let nomUtilisateur = "Paul";
+        let emailUtilisateur = "paul@paul.com";
+
+        if(validerFormulaire(nomUtilisateur,emailUtilisateur)){
+            afficherMessage("Le formulaire est valide");
+            envoyerDonnees({nom:nomUtilisateur,email:emailUtilisateur});
+        }else{
+            afficherMessage("Le formulaire est invalide");
+        }
+    </script>
+</body>
+</html>
