@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fonctions2</title>
+</head>
+
+<body>
+  <script>
+    let questions = [
+      { question: "Quelle est la capitale de la France ?", reponse: "Paris" },
+      { question: "Qui a peint la Joconde ?", reponse: "Leonardo da Vinci" },
+      // Plus de questions...
+    ];
+
+    function creerQuiz(questions) {
+      let indexQuestionActuelle = 0;
+      let score = 0;
+
+      return {
+        poserQuestion: function () {
+          if (indexQuestionActuelle < questions.length) {
+            return questions[indexQuestionActuelle].question;
+          } else {
+            return "Quiz terminé";
+          }
+        },
+        verifierReponse: function (reponse) {
+          if (reponse === questions[indexQuestionActuelle].reponse) {
+            score++;
+            console.log("Bonne réponse !");
+          } else {
+            console.log("Mauvaise réponse.");
+          }
+          indexQuestionActuelle++;
+        },
+        afficherScore: function () {
+          console.log("Votre score est de : " + score + "/" + questions.length);
+        }
+      };
+    }
+
+    const monQuiz = creerQuiz(questions);
+    console.log(monQuiz.poserQuestion());
+    monQuiz.verifierReponse("Paris");
+    monQuiz.afficherScore();
+
+
+  </script>
+
+</body>
+
+</html>
